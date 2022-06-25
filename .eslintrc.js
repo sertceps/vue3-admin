@@ -2,6 +2,8 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    // 解决 eslint 提示 defineProp undefined 的问题
+    "vue/setup-compiler-macros": true,
   },
   extends: [
     "plugin:vue/vue3-essential",
