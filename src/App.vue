@@ -1,3 +1,9 @@
-<template>APP</template>
+<template>
+  <SIcon icon="home" :size="30" />
+</template>
 
-<style lang="scss"></style>
+<script lang="ts" setup>
+import SIcon from "@/components/SIcon/SIcon.vue";
+</script>
+
+<style lang="scss" scoped></style>
