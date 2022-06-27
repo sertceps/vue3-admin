@@ -11,10 +11,8 @@ declare module "@vue/runtime-core" {
     ElDropdown: typeof import("element-plus/es")["ElDropdown"];
     ElDropdownItem: typeof import("element-plus/es")["ElDropdownItem"];
     ElDropdownMenu: typeof import("element-plus/es")["ElDropdownMenu"];
-    ElIcon: typeof import("element-plus/es")["ElIcon"];
     ElMenu: typeof import("element-plus/es")["ElMenu"];
     ElMenuItem: typeof import("element-plus/es")["ElMenuItem"];
-    ElMenuItemGroup: typeof import("element-plus/es")["ElMenuItemGroup"];
     ElSubMenu: typeof import("element-plus/es")["ElSubMenu"];
     RouterLink: typeof import("vue-router")["RouterLink"];
     RouterView: typeof import("vue-router")["RouterView"];

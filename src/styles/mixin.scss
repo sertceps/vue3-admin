@@ -1,0 +1,14 @@
+/** flex 布局相关 */
+// flex 水平垂直居中
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// flex column，水平垂直居中
+@mixin flex-c-center {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -3,14 +3,14 @@
      这些组件永远不接受任何 prop，因为它们是为你的应用所定制的，而不是它们所在的上下文。 -->
 <template>
   <div class="layout-container">
-    <aside class="aside-container">
-      <AsideBase />
-    </aside>
+    <AsideBase />
     <main class="main-container">
       <header class="header-container">
         <NavBase />
       </header>
-      <div class="view-container">view</div>
+      <div class="view-container">
+        <router-view />
+      </div>
     </main>
   </div>
 </template>
@@ -27,16 +27,17 @@ import AsideBase from "./components/Aside/AsideBase.vue";
   width: 100vw;
   height: 100vh;
   .main-container {
-    width: 100%;
-    overflow: auto;
+    flex: 1;
+    // 显式指定才能保证 aside 不位移
+    overflow-y: auto;
     .header-container {
       // 关于 sticky  https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/
       position: sticky;
       top: 0;
     }
     .view-container {
+      padding: 10px 20px;
       height: 2000px;
-      background-color: skyblue;
     }
   }
 }
