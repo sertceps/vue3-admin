@@ -1,9 +1,9 @@
 <template>
-  <SIcon icon="home" :size="30" />
+  <TheLayout />
 </template>
 
 <script lang="ts" setup>
-import SIcon from "@/components/SIcon/SIcon.vue";
+import TheLayout from "./layout/TheLayout.vue";
 </script>
 
 <style lang="scss" scoped></style>

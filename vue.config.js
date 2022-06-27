@@ -20,6 +20,8 @@ module.exports = defineConfig({
   },
   configureWebpack: {
     plugins: [
+      // 自动导入 css
+      require("unplugin-element-plus/webpack")({}),
       AutoImport({
         resolvers: [ElementPlusResolver()],
       }),
