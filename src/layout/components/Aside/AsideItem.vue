@@ -1,16 +1,109 @@
 <template>
-  <el-sub-menu index="1">
+  <template v-if="!alwaysShow && theOnlyOneChild && !theOnlyOneChild.children">
+    <AsideItemLink
+      v-if="theOnlyOneChild.meta"
+      :to="resolvePath(theOnlyOneChild)"
+    >
+      <el-menu-item :index="resolvePath(theOnlyOneChild)">
+        <SIcon
+          v-if="theOnlyOneChild.meta?.icon"
+          :icon="theOnlyOneChild.meta.icon"
+          class-name="aside-item-icon"
+        />
+        <span>{{ theOnlyOneChild.meta?.title }}</span>
+      </el-menu-item>
+    </AsideItemLink>
+  </template>
+
+  <el-sub-menu v-else :index="resolvePath(item)">
     <template #title>
-      <span>Navigator One</span>
+      <SIcon
+        v-if="item.meta?.icon"
+        :icon="item.meta.icon"
+        class-name="aside-item-icon"
+      />
+      <span>{{ item.meta?.title }}</span>
     </template>
-    <el-menu-item index="1-1">item one</el-menu-item>
-    <el-menu-item index="1-2">item one</el-menu-item>
+    <AsideItem
+      v-for="child in item.children"
+      :key="child.path"
+      :item="child"
+      :base-path="resolvePath(child)"
+    />
   </el-sub-menu>
-  <el-menu-item index="2">
-    <span>Navigator Two</span>
-  </el-menu-item>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import path from "path-browserify";
+import { PropType } from "vue";
+import { RouteRecordRaw } from "vue-router";
+import SIcon from "@/components/SIcon/SIcon.vue";
+import { computed } from "@vue/reactivity";
+import { isExternal } from "@/utils/validate";
+import AsideItemLink from "./AsideItemLink.vue";
 
-<style lang="scss" scoped></style>
+// 定义 prop
+const props = defineProps({
+  item: {
+    type: Object as PropType<RouteRecordRaw>,
+    required: true,
+  },
+  basePath: {
+    type: String,
+    required: true,
+  },
+});
+/**
+ * 判断是否展示根菜单
+ */
+const alwaysShow = computed(() => {
+  if (props.item.meta && props.item.meta.alwaysShow) return true;
+  return false;
+});
+
+/**
+ * 返回需要展示的 child 数量
+ */
+const showingChildNumber = computed(() => {
+  if (props.item.children) {
+    return props.item.children.filter((item) => {
+      if (item.meta && item.meta.hidden) return false;
+      return true;
+    }).length;
+  }
+
+  return 0;
+});
+
+/** 判断是否为唯一 child */
+const theOnlyOneChild = computed(() => {
+  // child 数量 > 1
+  if (showingChildNumber.value > 1) return null;
+  // child 数量是 1
+  if (props.item.children) {
+    for (const child of props.item.children) {
+      // const child = props.item.children[0];
+      // 如果 child 没有 meta，或者有 meta 但是并非隐藏
+      if (!child.meta || !child.meta.hidden) return child;
+    }
+  }
+  // child 数量是 0
+  return { ...props.item, path: "" };
+});
+
+const resolvePath = (route: RouteRecordRaw) => {
+  if (isExternal(route.path)) return route.path;
+  if (route.meta?.newTabShow) {
+    return location.origin + props.basePath + route.path;
+  }
+  if (isExternal(props.basePath)) return props.basePath;
+
+  return path.resolve(props.basePath, route.path);
+};
+</script>
+
+<style lang="scss" scoped>
+.aside-item-icon {
+  margin-right: 10px;
+}
+</style>

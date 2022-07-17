@@ -14,10 +14,17 @@ const resultRoutes: Array<RouteRecordRaw> = [
       {
         path: "success",
         component: () => import("@/views/Result/ResultSuccessView.vue"),
+        meta: {
+          title: "成功",
+          icon: "success",
+        },
       },
       {
         path: "error",
         component: () => import("@/views/Result/ResultErrorView.vue"),
+        meta: {
+          title: "错误",
+        },
       },
     ],
   },

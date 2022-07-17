@@ -1,6 +1,11 @@
 <!-- SVG 图标封装 -->
 <template>
-  <svg class="svg-icon" aria-hidden="true" :style="{ width: size + 'px' }">
+  <svg
+    class="svg-icon"
+    :class="className"
+    aria-hidden="true"
+    :style="{ width: size + 'px', height: size + 'px' }"
+  >
     <use :href="iconName" />
   </svg>
 </template>
@@ -17,11 +22,16 @@ import { computed } from "vue";
 const props = defineProps({
   icon: {
     type: String,
-    required: true,
+    required: false,
+    // required: true,
   },
   size: {
     type: Number,
     default: 24,
+  },
+  className: {
+    type: String,
+    required: false,
   },
 });
 

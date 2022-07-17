@@ -9,6 +9,7 @@ const excelRoutes: Array<RouteRecordRaw> = [
     meta: {
       title: "Excel",
       icon: "excel",
+      alwaysShow: true,
     },
     children: [
       {

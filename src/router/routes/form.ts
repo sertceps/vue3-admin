@@ -9,6 +9,7 @@ const formRoutes: Array<RouteRecordRaw> = [
     meta: {
       title: "表单",
       icon: "form",
+      alwaysShow: true,
     },
     children: [
       {

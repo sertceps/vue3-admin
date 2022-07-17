@@ -9,6 +9,7 @@ const editorRoutes: Array<RouteRecordRaw> = [
     meta: {
       title: "编辑器",
       icon: "editor",
+      alwaysShow: true,
     },
     children: [
       {

@@ -9,6 +9,7 @@ const i18nRoutes: Array<RouteRecordRaw> = [
     meta: {
       title: "国际化",
       icon: "i18n",
+      alwaysShow: true,
     },
     children: [
       {

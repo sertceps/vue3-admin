@@ -9,13 +9,14 @@ const guideRoutes: Array<RouteRecordRaw> = [
     meta: {
       title: "引导页",
       icon: "guide",
+      alwaysShow: true,
     },
     children: [
       {
         path: "basic",
         component: () => import("@/views/Guide/GuideBasicView.vue"),
         meta: {
-          title: "引导页",
+          title: "基础引导页",
         },
       },
     ],

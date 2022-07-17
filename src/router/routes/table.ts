@@ -9,6 +9,7 @@ const tableRoutes: Array<RouteRecordRaw> = [
     meta: {
       title: "表格页",
       icon: "table",
+      alwaysShow: true,
     },
     children: [
       {
