@@ -10,7 +10,9 @@
           :icon="theOnlyOneChild.meta.icon"
           class-name="aside-item-icon"
         />
-        <span>{{ theOnlyOneChild.meta?.title }}</span>
+        <template #title>
+          <span>{{ theOnlyOneChild.meta?.title }}</span>
+        </template>
       </el-menu-item>
     </AsideItemLink>
   </template>
@@ -105,5 +107,34 @@ const resolvePath = (route: RouteRecordRaw) => {
 <style lang="scss" scoped>
 .aside-item-icon {
   margin-right: 10px;
+}
+
+.el-menu--collapse {
+  .el-sub-menu {
+    :deep(.el-sub-menu__title) {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      .el-sub-menu__icon-arrow {
+        display: none;
+      }
+      // 菜单标题文字
+      span {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        visibility: hidden;
+        display: inline-block;
+      }
+    }
+  }
+
+  .el-menu-item {
+    :deep(.el-menu-tooltip__trigger) {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
 </style>

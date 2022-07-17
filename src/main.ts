@@ -5,6 +5,8 @@ import { createPinia } from "pinia";
 
 // css
 import "@/styles/index.scss";
+// Element-Plus CSS
+// import "element-plus/dist/index.css";
 
 // 批量注册 svg/icons
 import "@/assets/svg/icons";

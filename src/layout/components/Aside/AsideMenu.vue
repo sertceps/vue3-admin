@@ -1,10 +1,6 @@
 <!-- 本体用 -box，容器用 -container -->
 <template>
-  <el-menu
-    :collapse="appStore.isAsideMenuFolded"
-    :class="[appStore.isAsideMenuFolded ? 'el-menu-box-folded' : 'el-menu-box']"
-    :style="{}"
-  >
+  <el-menu :collapse="appStore.isAsideMenuFolded" class="sidebar-menu">
     <AsideItem
       v-for="route in getRoutes()"
       :key="route.path"
@@ -22,4 +18,8 @@ import AsideItem from "./AsideItem.vue";
 const appStore = useAppStore();
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.sidebar-menu {
+  height: 100vh;
+}
+</style>
