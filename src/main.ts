@@ -5,6 +5,7 @@ import { createPinia } from "pinia";
 
 // css
 import "@/styles/index.scss";
+import "@/styles/transition.scss";
 // Element-Plus CSS
 // import "element-plus/dist/index.css";
 

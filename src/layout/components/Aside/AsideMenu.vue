@@ -1,6 +1,10 @@
 <!-- 本体用 -box，容器用 -container -->
 <template>
-  <el-menu :collapse="appStore.isAsideMenuFolded" class="sidebar-menu">
+  <el-menu
+    :collapse="appStore.isAsideMenuFolded"
+    class="sidebar-menu"
+    default-active="/home"
+  >
     <AsideItem
       v-for="route in getRoutes()"
       :key="route.path"

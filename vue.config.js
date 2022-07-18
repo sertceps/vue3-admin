@@ -8,6 +8,7 @@ const resolve = (dir) => path.join(__dirname, dir);
 
 module.exports = defineConfig({
   transpileDependencies: true,
+  //TODO 直接导入和在这里导入有什么不同
   css: {
     loaderOptions: {
       sass: {
