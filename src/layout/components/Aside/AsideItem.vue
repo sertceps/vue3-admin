@@ -107,6 +107,13 @@ const resolvePath = (route: RouteRecordRaw) => {
 <style lang="scss" scoped>
 .aside-item-icon {
   margin-right: 10px;
+  // svg currentColor
+  color: #fff;
+}
+.is-active {
+  .aside-item-icon {
+    color: #409eff;
+  }
 }
 
 .el-menu--collapse {

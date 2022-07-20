@@ -8,6 +8,8 @@ import "@/styles/index.scss";
 import "@/styles/transition.scss";
 // Element-Plus CSS
 // import "element-plus/dist/index.css";
+// i18n
+import i18n from "@/i18n/index";
 
 // 批量注册 svg/icons
 import "@/assets/svg/icons";
@@ -21,4 +23,5 @@ const app = createApp(App);
 
 app.use(createPinia());
 app.use(router);
+app.use(i18n);
 app.mount("#app");

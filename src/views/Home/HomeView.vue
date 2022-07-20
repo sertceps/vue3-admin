@@ -1,4 +1,6 @@
-<template>Home</template>
+<template>
+  {{ $t("msg.test") }}
+</template>
 
 <script setup lang="ts"></script>
 
