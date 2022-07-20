@@ -11,6 +11,7 @@
   "dependencies": {
     "@icon-park/vue-next": "^1.4.1",
     "@types/path-browserify": "^1.0.0",
+    "@vueuse/core": "^8.9.4",
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
     "echarts": "^5.3.3",
