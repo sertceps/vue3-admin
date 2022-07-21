@@ -11,7 +11,7 @@
           class-name="aside-item-icon"
         />
         <template #title>
-          <span>{{ theOnlyOneChild.meta?.title }}</span>
+          <span>{{ generateI18nTitle(theOnlyOneChild.meta?.title) }}</span>
         </template>
       </el-menu-item>
     </AsideItemLink>
@@ -24,7 +24,7 @@
         :icon="item.meta.icon"
         class-name="aside-item-icon"
       />
-      <span>{{ item.meta?.title }}</span>
+      <span>{{ generateI18nTitle(item.meta?.title) }}</span>
     </template>
     <AsideItem
       v-for="child in item.children"
@@ -43,6 +43,7 @@ import SIcon from "@/components/SIcon/SIcon.vue";
 import { computed } from "@vue/reactivity";
 import { isExternal } from "@/utils/validate";
 import AsideItemLink from "./AsideItemLink.vue";
+import { generateI18nTitle } from "@/utils/i18n";
 
 // 定义 prop
 const props = defineProps({

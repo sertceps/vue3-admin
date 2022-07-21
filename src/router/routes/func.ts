@@ -7,7 +7,7 @@ const funcRoutes: Array<RouteRecordRaw> = [
     component: TheLayout,
     redirect: "/func/image-clip",
     meta: {
-      title: "功能",
+      title: "func",
       icon: "func",
     },
     children: [
@@ -15,21 +15,21 @@ const funcRoutes: Array<RouteRecordRaw> = [
         path: "image-clip",
         component: () => import("@/views/Func/FuncImageClipView.vue"),
         meta: {
-          title: "图片裁剪",
+          title: "funcImageClip",
         },
       },
       {
         path: "dialog-drag",
         component: () => import("@/views/Func/FuncDialogDragView.vue"),
         meta: {
-          title: "弹窗拖拽",
+          title: "funcDialogDrag",
         },
       },
       {
         path: "video-play",
         component: () => import("@/views/Func/FuncVideoPlayView.vue"),
         meta: {
-          title: "视频播放",
+          title: "funcVideoPlay",
         },
       },
     ],

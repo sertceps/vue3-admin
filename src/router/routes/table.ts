@@ -7,7 +7,7 @@ const tableRoutes: Array<RouteRecordRaw> = [
     component: TheLayout,
     redirect: "/table/basic",
     meta: {
-      title: "表格页",
+      title: "table",
       icon: "table",
       alwaysShow: true,
     },
@@ -16,7 +16,7 @@ const tableRoutes: Array<RouteRecordRaw> = [
         path: "basic",
         component: () => import("@/views/Table/TableBasicView.vue"),
         meta: {
-          title: "基础表格",
+          title: "tableBasic",
         },
       },
     ],

@@ -7,7 +7,7 @@ const formRoutes: Array<RouteRecordRaw> = [
     component: TheLayout,
     redirect: "/form/basic",
     meta: {
-      title: "表单",
+      title: "form",
       icon: "form",
       alwaysShow: true,
     },
@@ -16,7 +16,7 @@ const formRoutes: Array<RouteRecordRaw> = [
         path: "basic",
         component: () => import("@/views/Form/FormBasicView.vue"),
         meta: {
-          title: "基础表单",
+          title: "formBasic",
         },
       },
     ],

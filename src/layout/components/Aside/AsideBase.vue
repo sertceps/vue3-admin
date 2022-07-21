@@ -21,7 +21,9 @@ const appStore = useAppStore();
   width: $sideMenuWidth;
   transition: width 0.28s ease-in-out;
   // 用 element-ui 提供的滚动条
+  // TODO 滚动问题
   overflow: hidden;
+  overflow-y: auto;
 }
 
 .aside-base-container-folded {

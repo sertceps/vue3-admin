@@ -7,7 +7,7 @@ const editorRoutes: Array<RouteRecordRaw> = [
     component: TheLayout,
     redirect: "/editor/basic",
     meta: {
-      title: "编辑器",
+      title: "editor",
       icon: "editor",
       alwaysShow: true,
     },
@@ -16,7 +16,7 @@ const editorRoutes: Array<RouteRecordRaw> = [
         path: "basic",
         component: () => import("@/views/Editor/EditorBasicView.vue"),
         meta: {
-          title: "基础编辑器",
+          title: "editorBasic",
         },
       },
     ],

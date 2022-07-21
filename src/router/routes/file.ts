@@ -7,7 +7,7 @@ const fileRoutes: Array<RouteRecordRaw> = [
     component: TheLayout,
     redirect: "/file/image",
     meta: {
-      title: "文件相关",
+      title: "file",
       icon: "file",
     },
     children: [
@@ -15,21 +15,21 @@ const fileRoutes: Array<RouteRecordRaw> = [
         path: "image",
         component: () => import("@/views/File/FileImageView.vue"),
         meta: {
-          title: "图片上传",
+          title: "fileImage",
         },
       },
       {
         path: "doc",
         component: () => import("@/views/File/FileDocView.vue"),
         meta: {
-          title: "文档上传",
+          title: "fileDoc",
         },
       },
       {
         path: "pdf",
         component: () => import("@/views/File/FilePdfView.vue"),
         meta: {
-          title: "PDF 预览",
+          title: "filePdf",
         },
       },
     ],

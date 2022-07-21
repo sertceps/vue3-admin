@@ -7,7 +7,7 @@
   >
     <!-- tooltip 需要有元素包裹，并且内部也要有元素 -->
     <div>
-      <el-tooltip content="国际化" :effect="effect">
+      <el-tooltip :content="$t('languageSelect.tooltip')" :effect="effect">
         <VIcon type="translate" :size="24" />
       </el-tooltip>
     </div>
@@ -55,8 +55,14 @@ function handleSelectLanguage(language: string) {
   // 1. 切换 i18n locale 2. 修改 store 3. 提示
   i18n.locale.value = language;
   appStore.setLanguage(language);
-  ElMessage.success("语言切换成功");
+  ElMessage.success(i18n.t("i18n.basic.languageSwitchedMessage"));
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.international {
+  // @include flex-center;
+  margin-right: 20px;
+  @include hoverEffect(0.3s, rgba(0, 0, 0, 0.1));
+}
+</style>

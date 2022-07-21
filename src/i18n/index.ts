@@ -1,24 +1,17 @@
 import { createI18n } from "vue-i18n";
+import { LanguageKey } from "@/store/constants";
+import zh from "./lang/zh";
+import en from "./lang/en";
 
 const messages = {
-  en: {
-    msg: {
-      test: "hello world",
-    },
-  },
-  zh: {
-    msg: {
-      test: "你好世界",
-    },
-  },
+  en,
+  zh,
 };
-
-const locale = "zh";
 
 const i18n = createI18n({
   // 使用 composition API
   legacy: false,
-  locale,
+  locale: localStorage.getItem(LanguageKey) || "zh",
   messages,
   // 全局使用 t 函数
   // If set to true, then properties and methods prefixed with $ are injected into Vue Component.

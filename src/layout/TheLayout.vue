@@ -34,6 +34,7 @@ import AsideBase from "./components/Aside/AsideBase.vue";
       // 关于 sticky  https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/
       position: sticky;
       top: 0;
+      z-index: 999;
     }
     .view-container {
       padding: 10px 20px;

@@ -20,7 +20,6 @@ import LanguageSelect from "@/components/LanguageSelect/LanguageSelect.vue";
   align-items: center;
   height: 60px;
   padding: 0 20px;
-  padding-right: 30px;
   background: #fff;
 }
 </style>

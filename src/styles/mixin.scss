@@ -12,3 +12,13 @@
   justify-content: center;
   align-items: center;
 }
+
+/* 通用效果 */
+// 鼠标悬浮效果
+@mixin hoverEffect($time: 0.3s, $background: rgba(0, 0, 0, 0.025)) {
+  cursor: pointer;
+  transition: background $time;
+  &:hover {
+    background: $background;
+  }
+}

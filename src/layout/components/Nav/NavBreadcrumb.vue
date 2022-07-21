@@ -7,10 +7,12 @@
       >
         <!-- 不可点击 -->
         <span v-if="index === breadcrumbData.length - 1">{{
-          item.meta?.title
+          generateI18nTitle(item.meta?.title)
         }}</span>
         <!-- 可点击 -->
-        <a v-else @click.prevent="handleLink(item)">{{ item.meta?.title }}</a>
+        <a v-else @click.prevent="handleLink(item)">{{
+          generateI18nTitle(item.meta?.title)
+        }}</a>
       </el-breadcrumb-item>
     </transition-group>
   </el-breadcrumb>
@@ -20,6 +22,7 @@
 import router from "@/router";
 import { ref, watch } from "vue";
 import { RouteLocationMatched, RouteRecordRaw, useRoute } from "vue-router";
+import { generateI18nTitle } from "@/utils/i18n";
 
 const route = useRoute();
 /** 面包屑数据 */

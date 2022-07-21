@@ -7,7 +7,7 @@ const guideRoutes: Array<RouteRecordRaw> = [
     component: TheLayout,
     redirect: "/guide/basic",
     meta: {
-      title: "引导页",
+      title: "guide",
       icon: "guide",
       alwaysShow: true,
     },
@@ -16,7 +16,7 @@ const guideRoutes: Array<RouteRecordRaw> = [
         path: "basic",
         component: () => import("@/views/Guide/GuideBasicView.vue"),
         meta: {
-          title: "基础引导页",
+          title: "guideBasic",
         },
       },
     ],

@@ -7,7 +7,7 @@ const excelRoutes: Array<RouteRecordRaw> = [
     component: TheLayout,
     redirect: "/excel/export",
     meta: {
-      title: "Excel",
+      title: "excel",
       icon: "excel",
       alwaysShow: true,
     },
@@ -16,7 +16,7 @@ const excelRoutes: Array<RouteRecordRaw> = [
         path: "export",
         component: () => import("@/views/Excel/ExcelExportView.vue"),
         meta: {
-          title: "导出 Excel",
+          title: "excelExport",
         },
       },
     ],

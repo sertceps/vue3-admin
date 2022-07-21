@@ -7,7 +7,7 @@ const resultRoutes: Array<RouteRecordRaw> = [
     component: TheyLayout,
     redirect: "/result/success",
     meta: {
-      title: "结果页",
+      title: "result",
       icon: "result",
     },
     children: [
@@ -15,15 +15,15 @@ const resultRoutes: Array<RouteRecordRaw> = [
         path: "success",
         component: () => import("@/views/Result/ResultSuccessView.vue"),
         meta: {
-          title: "成功",
+          title: "resultSuccess",
           icon: "success",
         },
       },
       {
-        path: "error",
+        path: "fail",
         component: () => import("@/views/Result/ResultErrorView.vue"),
         meta: {
-          title: "错误",
+          title: "resultFail",
         },
       },
     ],

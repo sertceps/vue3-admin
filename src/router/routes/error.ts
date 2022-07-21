@@ -7,7 +7,7 @@ const errorRoutes: Array<RouteRecordRaw> = [
     component: TheLayout,
     redirect: "/error/403",
     meta: {
-      title: "错误页",
+      title: "error",
       icon: "error",
     },
     children: [
@@ -15,21 +15,21 @@ const errorRoutes: Array<RouteRecordRaw> = [
         path: "403",
         component: () => import("@/views/Error/Error403View.vue"),
         meta: {
-          title: "403",
+          title: "error403",
         },
       },
       {
         path: "500",
         component: () => import("@/views/Error/Error500View.vue"),
         meta: {
-          title: "500",
+          title: "error500",
         },
       },
       {
         path: "404",
         component: () => import("@/views/Error/Error404View.vue"),
         meta: {
-          title: "404",
+          title: "error404",
         },
       },
       {

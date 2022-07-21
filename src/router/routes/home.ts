@@ -11,7 +11,7 @@ const homeRoutes: Array<RouteRecordRaw> = [
         path: "home",
         component: () => import("@/views/Home/HomeView.vue"),
         meta: {
-          title: "首页",
+          title: "home",
           icon: "home",
         },
       },

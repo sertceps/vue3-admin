@@ -7,7 +7,7 @@ const i18nRoutes: Array<RouteRecordRaw> = [
     component: TheLayout,
     redirect: "/i18n/basic",
     meta: {
-      title: "国际化",
+      title: "i18n",
       icon: "i18n",
       alwaysShow: true,
     },
@@ -16,7 +16,7 @@ const i18nRoutes: Array<RouteRecordRaw> = [
         path: "basic",
         component: () => import("@/views/I18n/I18nBasicView.vue"),
         meta: {
-          title: "基础国际化",
+          title: "i18nBasic",
         },
       },
     ],

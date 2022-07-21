@@ -9,7 +9,7 @@ const multiLevelRoutes: Array<RouteRecordRaw> = [
     path: "/multi-level",
     component: TheLayout,
     meta: {
-      title: "多级菜单",
+      title: "multiLevel",
       icon: "nesting",
     },
     children: [
@@ -17,21 +17,21 @@ const multiLevelRoutes: Array<RouteRecordRaw> = [
         path: "level1",
         component: () => import("@/views/MultiLevel/MultiLevelOneView.vue"),
         meta: {
-          title: "第一级",
+          title: "multiLevel1",
         },
         children: [
           {
             path: "level2",
             component: () => import("@/views/MultiLevel/MultiLevelTwoView.vue"),
             meta: {
-              title: "第二级",
+              title: "multiLevel2",
             },
             children: [
               {
                 path: "level3",
                 component: () => import("@/views/MultiLevel/MultiLevelThreeView.vue"),
                 meta: {
-                  title: "第三级",
+                  title: "multiLevel3",
                   //! alwaysShow 不设置为 true 会直接展示第四级
                   alwaysShow: true,
                 },
@@ -40,7 +40,7 @@ const multiLevelRoutes: Array<RouteRecordRaw> = [
                     path: "level4",
                     component: () => import("@/views/MultiLevel/MultiLevelFourView.vue"),
                     meta: {
-                      title: "第四级",
+                      title: "multiLevel4",
                     },
                   },
                 ],
