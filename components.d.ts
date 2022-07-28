@@ -23,6 +23,7 @@ declare module "@vue/runtime-core" {
     LanguageSelect: typeof import("./src/components/LanguageSelect/LanguageSelect.vue")["default"];
     RouterLink: typeof import("vue-router")["RouterLink"];
     RouterView: typeof import("vue-router")["RouterView"];
+    ScreenFull: typeof import("./src/components/ScreenFull/ScreenFull.vue")["default"];
     SIcon: typeof import("./src/components/SIcon/SIcon.vue")["default"];
     ThemeSelect: typeof import("./src/components/ThemeSelect/ThemeSelect.vue")["default"];
     ThemeSelectDrawer: typeof import("./src/components/ThemeSelect/ThemeSelectDrawer.vue")["default"];
