@@ -3,6 +3,7 @@
     <NavHamburger />
     <NavBreadcrumb />
     <NavAvatar />
+    <ThemeSelect />
     <LanguageSelect />
   </nav>
 </template>
@@ -12,6 +13,7 @@ import NavBreadcrumb from "./NavBreadcrumb.vue";
 import NavAvatar from "./NavAvatar.vue";
 import NavHamburger from "./NavHamburger.vue";
 import LanguageSelect from "@/components/LanguageSelect/LanguageSelect.vue";
+import ThemeSelect from "../../../components/ThemeSelect/ThemeSelect.vue";
 </script>
 
 <style lang="scss" scoped>

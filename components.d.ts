@@ -8,6 +8,9 @@ declare module "@vue/runtime-core" {
     ElAvatar: typeof import("element-plus/es")["ElAvatar"];
     ElBreadcrumb: typeof import("element-plus/es")["ElBreadcrumb"];
     ElBreadcrumbItem: typeof import("element-plus/es")["ElBreadcrumbItem"];
+    ElButton: typeof import("element-plus/es")["ElButton"];
+    ElColorPicker: typeof import("element-plus/es")["ElColorPicker"];
+    ElDrawer: typeof import("element-plus/es")["ElDrawer"];
     ElDropdown: typeof import("element-plus/es")["ElDropdown"];
     ElDropdownItem: typeof import("element-plus/es")["ElDropdownItem"];
     ElDropdownMenu: typeof import("element-plus/es")["ElDropdownMenu"];
@@ -21,6 +24,8 @@ declare module "@vue/runtime-core" {
     RouterLink: typeof import("vue-router")["RouterLink"];
     RouterView: typeof import("vue-router")["RouterView"];
     SIcon: typeof import("./src/components/SIcon/SIcon.vue")["default"];
+    ThemeSelect: typeof import("./src/components/ThemeSelect/ThemeSelect.vue")["default"];
+    ThemeSelectDrawer: typeof import("./src/components/ThemeSelect/ThemeSelectDrawer.vue")["default"];
     VIcon: typeof import("./src/components/VIcon/VIcon.vue")["default"];
   }
 }

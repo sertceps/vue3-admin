@@ -1,4 +1,20 @@
 export default {
+  languageSelect: {
+    tooltip: "i18n",
+  },
+  nav: {
+    themeSelect: {
+      tooltip: "Switch Theme",
+    },
+  },
+  i18n: {
+    basic: {
+      languageSwitchedMessage: "Language switched successfully",
+      tooltip: "Switch language by clicking icon on the navigation bar.",
+      pageSizeText: "item per page",
+      currentPageText: "Current page:",
+    },
+  },
   route: {
     // editor
     editor: "Editor",
@@ -45,16 +61,5 @@ export default {
     // table
     table: "Table Page",
     tableBasic: "Basic Table",
-  },
-  languageSelect: {
-    tooltip: "i18n",
-  },
-  i18n: {
-    basic: {
-      languageSwitchedMessage: "Language switched successfully",
-      tooltip: "Switch language by clicking icon on the navigation bar.",
-      pageSizeText: "item per page",
-      currentPageText: "Current page:",
-    },
   },
 };

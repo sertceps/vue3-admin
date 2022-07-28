@@ -6,7 +6,7 @@
     @command="handleSelectLanguage"
   >
     <!-- tooltip 需要有元素包裹，并且内部也要有元素 -->
-    <div>
+    <div class="nav-icon-tooltip">
       <el-tooltip :content="$t('languageSelect.tooltip')" :effect="effect">
         <VIcon type="translate" :size="24" />
       </el-tooltip>
@@ -59,10 +59,4 @@ function handleSelectLanguage(language: string) {
 }
 </script>
 
-<style lang="scss" scoped>
-.international {
-  // @include flex-center;
-  margin-right: 20px;
-  @include hoverEffect(0.3s, rgba(0, 0, 0, 0.1));
-}
-</style>
+<style lang="scss" scoped></style>

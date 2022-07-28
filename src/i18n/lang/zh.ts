@@ -1,4 +1,20 @@
 export default {
+  languageSelect: {
+    tooltip: "国际化",
+  },
+  nav: {
+    themeSelect: {
+      tooltip: "切换主题",
+    },
+  },
+  i18n: {
+    basic: {
+      languageSwitchedMessage: "语言切换成功",
+      tooltip: "通过点击导航栏上面的图标进行语言切换。",
+      pageSizeText: "条每页",
+      currentPageText: "当前页：",
+    },
+  },
   route: {
     // editor
     editor: "编辑器",
@@ -45,16 +61,5 @@ export default {
     // table
     table: "表格页",
     tableBasic: "基础表格",
-  },
-  languageSelect: {
-    tooltip: "国际化",
-  },
-  i18n: {
-    basic: {
-      languageSwitchedMessage: "语言切换成功",
-      tooltip: "通过点击导航栏上面的图标进行语言切换。",
-      pageSizeText: "条每页",
-      currentPageText: "当前页：",
-    },
   },
 };

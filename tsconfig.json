@@ -5,6 +5,10 @@
     "strict": true,
     "jsx": "preserve",
     "moduleResolution": "node",
+    // 解析 JSON 模块
+    // "resolveJsonModule": true,
+    // 允许 JS
+    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

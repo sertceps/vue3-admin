@@ -1,0 +1,9 @@
+/* 一些通用样式类 */
+
+/* Nav Icon tooltip 样式 */
+.nav-icon-tooltip {
+  height: 60px;
+  width: 40px;
+  @include flex-center;
+  @include hoverEffect(0.3s, rgba(0, 0, 0, 0.1));
+}
