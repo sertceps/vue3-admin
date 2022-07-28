@@ -25,5 +25,6 @@ import ScreenFull from "@/components/ScreenFull/ScreenFull.vue";
   height: 60px;
   padding: 0 20px;
   background: #fff;
+  // border-bottom: 1px solid #ccc;
 }
 </style>

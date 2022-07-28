@@ -4,7 +4,8 @@
  */
 import { useLocalStorage } from "@vueuse/core";
 import { defineStore } from "pinia";
-import { AppStoreId, LanguageKey, MainColorKey } from "../constants";
+import { AppStoreId, LanguageKey, MainColorKey, TagsViewKey } from "../constants";
+import { TagsViewRouteRecord } from "@/models/app";
 
 const useAppStore = defineStore(AppStoreId, {
   state: () => ({
@@ -14,6 +15,8 @@ const useAppStore = defineStore(AppStoreId, {
     language: useLocalStorage<string>(LanguageKey, "zh"),
     // 主题色
     mainColor: useLocalStorage<string>(MainColorKey, "#00ff00"),
+    // tagsView 列表
+    tagViewList: useLocalStorage<Array<TagsViewRouteRecord>>(TagsViewKey, []),
   }),
   actions: {
     /** 侧边菜单折叠展开 */
@@ -27,6 +30,26 @@ const useAppStore = defineStore(AppStoreId, {
     /** 设置主题色 */
     setMainColor(mainColor: string) {
       this.mainColor = mainColor;
+    },
+    /** 添加 tags */
+    addTagsViewList(tag: TagsViewRouteRecord) {
+      // 处理重复
+      const isFind = this.tagViewList.find((item) => item.path === tag.path);
+      if (isFind) return;
+      this.tagViewList.push(tag);
+    },
+    /** 修改 tags title 语言 */
+    changeTagsView(index: number, tag: TagsViewRouteRecord) {
+      this.tagViewList[index] = tag;
+    },
+    /** 删除 tags */
+    removeTagsView(type: "other" | "right" | "index", index: number) {
+      if (type === "index") return this.tagViewList.splice(index, 1);
+      if (type === "right") return this.tagViewList.splice(index + 1, this.tagViewList.length - index + 1);
+      if (type === "other") {
+        this.tagViewList.splice(index + 1, this.tagViewList.length - index + 1);
+        this.tagViewList.splice(0, index);
+      }
     },
   },
 });

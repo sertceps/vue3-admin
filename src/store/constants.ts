@@ -10,3 +10,5 @@ export const AppStoreId = "APP_STORE_ID";
 export const LanguageKey = "LANGUAGE_KEY";
 /** 主题色 LocalStorage key */
 export const MainColorKey = "MAIN_COLOR_KEY";
+/** tags View LocalStorage key */
+export const TagsViewKey = "TAGS_VIEW_KEY";
