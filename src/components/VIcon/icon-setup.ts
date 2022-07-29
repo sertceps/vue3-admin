@@ -9,6 +9,7 @@ import {
   FullScreenOne,
   OffScreen,
   CloseSmall,
+  GuideBoard,
 } from "@icon-park/vue-next";
 
 /** 定义图标字典 */
@@ -21,4 +22,5 @@ export default <{ [key: string]: Icon }>{
   FullScreenOne,
   OffScreen,
   CloseSmall,
+  GuideBoard,
 };

@@ -2,6 +2,7 @@
   <div @click="onToggle" class="nav-icon-tooltip">
     <el-tooltip :content="isFullScreen ? '取消全屏' : '全屏'">
       <VIcon
+        id="guide-full-screen"
         :type="isFullScreen ? 'off-screen' : 'full-screen-one'"
         :size="24"
       />

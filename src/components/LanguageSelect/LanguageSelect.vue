@@ -8,7 +8,7 @@
     <!-- tooltip 需要有元素包裹，并且内部也要有元素 -->
     <div class="nav-icon-tooltip">
       <el-tooltip :content="$t('languageSelect.tooltip')" :effect="effect">
-        <VIcon type="translate" :size="24" />
+        <VIcon type="translate" :size="24" id="guide-i18n" />
       </el-tooltip>
     </div>
 
